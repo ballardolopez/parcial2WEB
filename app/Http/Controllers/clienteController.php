@@ -14,6 +14,13 @@ class clienteController extends Controller
      */
     public function index()
     {
+        /*$texto=trim($request->get('texto'));
+        /*$cliente=cliente::table('cliente')
+        ->select('id','Primer_nombre','Segundo_nombre','Primer_apellido', 'Segundo_apellido', 'Direccion', 'Telefono')
+        ->where('Primer_nombre','LIKE','%'.$texto.'%')
+        ->orwhere('Segundo_apellido','LIKE','%'.$texto.'%')
+        ->orderBy('Primer_apellido','asc')
+        ->paginate(10);*/
         $cliente=cliente::orderByDesc('id')->get();
         return view('cliente.index', compact('cliente'));
     }

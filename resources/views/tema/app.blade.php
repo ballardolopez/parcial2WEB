@@ -19,7 +19,7 @@
             </div>
             <div class="col-sm-12">
                 <a href="{{ route('cliente.create') }}" class="btn btn-link">Crear Cliente</a>
-                <a href="" class="btn btn-link">Listar tareas </a>
+                <a href="{{ route('cliente.index') }}" class="btn btn-link">Listar Clientes </a>
             </div>
             <div class="col-sm-12">
                 @yield('contenido')

@@ -7,7 +7,22 @@
         Lista de Clientes
     </h3>
 
-    <table>
+    <div class="col-sm-10">
+        <form action="{{ route('cliente.index') }}" method="GET">
+            <div class="form-row">
+                <div class="col-sm-4 my-1">
+                     <input type="text" class="form-control" name="texto" value="">
+                </div>
+                <div class="col-sm-4 my-11">
+                    <input type="submit" class="btn btn-primary" value="Buscar">
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>
